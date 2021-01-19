@@ -1,0 +1,24 @@
+@media (max-width:800px) {
+    .box {
+        width: calc(calc(100% /1) - 40px)!important;
+        /* margin-right: 200px!important; */
+        float: none!important;
+        margin-left: 20px;
+    }
+    .box ul li {
+        text-align: center!important;
+    }
+    a {
+        text-decoration: none;
+    }
+    .box h5 {
+        text-align: center!important;
+        margin-left: 30px;
+    }
+    .Services {
+        width: calc(calc(100%) - 50px)!important;
+        margin-left: 30px!important;
+        text-align: center!important;
+    }
+   
+}

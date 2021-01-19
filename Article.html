@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="heder">
+        <a href="index.html">
+            <h4>وبلاگ شخصی مهدی </h4>
+        </a>
+        <button class=" menu-burger" onclick="showMenu()">  <i class="fa fa-bars"></i></button>
+        <div class="heder-menu  ">
+
+
+            <ul class="header-menu" id="menu">
+                <li> </li>
+
+                <li class=""><a href="#">تگ ها</a></li>
+                <li class=""><a href="group.html">گروه ها</a></li>
+                <li class="mr-20"><a href="#">بلاگ</a> </li>
+
+            </ul>
+            <div class="clear-fix"></div>
+        </div>
+    </div>
+    <div class="item3 mb-20px">
+        <div class="profile">
+            <img src="img/my-pic-2.png" alt="">
+        </div>
+        <div class="logo">
+            <p> مهدی </p>
+            <h5>توسعه دهنده نرم افزار</h5>
+            <img class="m-b" src="img/github_ic.png" alt="">
+            <img class="m-b" src="img/Gmail-ic.png" alt="">
+            <img class="m-b" src="img/linkedin_ic.png" alt="">
+            <img class="m-b" src="img/nuget_ic.png" alt="">
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <div class="services">
+
+        <div class="item1 margin">
+            <h1>
+                <a href="#">  بخش اول : مفهوم -Continuous Dellivery</a>
+
+            </h1>
+            <ul>
+                <li><i class="fa fa-list"></i><a>Software Testing</a></li>
+                <li><a>DevOps</a></li>
+                <li> سه شنبه 20 آذر 1397 <i class="fa fa-calendar"></i></li>
+                <li> پیشرفته<i class=" 	fa fa-bar-chart"></i></li>
+            </ul>
+
+            <p class="font"> <span>مفهوم</span> در مقاله های قبلی با <span>CI</span> آشنا شدیم و با استفاده از امکانات داخلی TFS توانستیم یک فرآیند تعریف کنیم که بعد از هر بار تغییر روی سورس اجرا شده و در نهایت باعث یکپارچه سازی آن میشد. اما بعد از اینکه ما توانستیم نسخه
+                های stable و یکپارچه ی سورس خود را مشخص کنیم توسط آنها چه ارزشی را میتوانیم به بیزنس خود اضافه کنیم؟ در ادامه و با بررسی این مسئله با CD یا همان Continuous Dellivery آشنا خواهیم شد. </p>
+
+
+        </div>
+        <div class="item-Articale margin">
+            <h2>
+                Continuous Dellivery چیست؟ </h1>
+                <p class="">
+
+                    Continuous Dellivery یا "تحویل مداوم" در واقع یک فرآیند برای Build کردن سورس و سپس اجرای یک سری تست و در نهایت Deploy کردن روی محیط Production می باشد. این فرآیند ممکن است شامل یک یا چند محیط Staging و Testing نیز باشد اما در نهایت نتیجه ی کار روی محیط
+                    Production منتشر یا به اصطلاح Release میشود.</p>
+        </div>
+        <div class="item1-Article margin">
+            <h2><b>یک مسئله </b></h2>
+            <p><b> به زبان ساده برای درک بهتر در نظر بگیرید که یک فریلنسر هستید و یک پروژه از مشتری دریافت کرده و در حال توسعه ی آن هستید و طبق توافق فاز اول از پروژه آماده ی انتشار است. به صورت معمول شما باید از سورس پروژه روی لوکال یک Publish بگیرید و سپس روی سرور مشتری deploy کنید اما داستان از همینجا شروع میشود. شما کل وقتتان درگیر انجام سایر تسک های پروژه است و مشتری هم کل وقتش را درحال تست و بررسی از طریق UI است و مدام به شما گزارش باگ و تغییرات اعلام میکند. شما ناچارید توسعه را متوقف کنید و باگ و تغییرات گزارش شده را به سورس اعمال کنید. حالا دوباره باید پابلیش بگیرید و deploy کنید و جدای از اینکه در فرآیند های پابلیش و آپلود کردن سورس ممکن است مشکلات زیادی به وجود بیایند که باعث از دسترس خارج شدن برنامه شوند این چرخه ی اعلام باگ و دیباگ و پابلیش و آپلود کل تایم شما را خواهد گرفت و توسعه ی ادامه ی پروژه تبدیل به یک عذاب خواهد شد. 
+
+
+            </b></p>
+        </div>
+        <div class="item1-Article margin">
+            <h2><b>یک راه حل </b></h2>
+            <p><b>حالا راهکاری که CD ارائه میکند این است که با توجه به اینکه ما طبق سری مقالات CI همواره یک نسخه ی یکپارچه و stable از سورس را داریم میتوانیم یک فرآیند دیگری را هم تعریف کنیم که پابلیش و deploy و تست کردن پروژه روی سرور مشتری را نیز به صورت خودکار انجام دهد. در این صورت اگر ویژگی جدیدی در برنامه کد نویسی کردیم و یا اگر مشکلی از نظر مشتری در نسخه ی جاری برنامه وجود داشته و به ما گزارش دهد کافی است آن را در سورس حل کرده و Check In کنیم و به ادامه ی توسعه ی خود بپردازیم چرا که در پشت صحنه فرآیندهایی که قبلا به صورت دستی انجام میدادیم اینبار به صورت خودکار انجام شده است. </b></p>
+        </div>
+        <div class="image">
+            <img src="img/1_OQXSur8D0eyf6sFaxew6GA_fullsize_nXn.png" alt="   ">
+        </div>
+        <div class="item1-Article margin">
+            <h2><b>تعریف یک فرآیند </b></h2>
+            <p><b>در مقالات آتی یک فرآیند CD به شکل زیر را به کمک TFS پیاده خواهیم کرد : یک محیط Staging ایجاد میکنیم که در واقع یک محیط برای deploy کردن پروژه قبل از محیط Production است و آنجا میخواهیم از صحت برنامه مطمئن شویم. در واقع محیط Production همن محیط عملیاتی است که نتیجه ی نهایی در دسترس End User ها قرار میگیرد و با توجه به حساس بودن این محیط ما نمیخواهیم که ریسک کنیم و نسخه های تحویل گرفته شده از فرآیند CI را مستقیما آنجا deploy کنیم چرا که ممکن است آن نسخه مشکلی داشته باشد و برنامه را از دسترس کاربران خارج کند. برای ایجاد محیط های Production و Staging کافی است برای هرکدام یک وب سایت در iis درست کنید مثلا به اسم myapp و staging.myapp که هر کدام با یک دامنه مثلا به اسمهای myapp.ir و staging.myapp.ir در دسترس هستند.این وب سایتها میتوانند روی دو سرور مجزا هم تعریف شوند که بستگی به میزان منابع و حساسیت پروژه دارد. فرآیند را به این شکل تعریف میکنیم که ابتدا نسخه ی دریافتی از CI را روی محیط Staging منتشر کند.سپس یک سری تست UI را به صورت E2E روی آن اجرا میکنیم تا مطمئن شویم وب سایت در دسترس است و به درستی کار میکند.حالا این نسخه که با موفقیت روی Staging اجرا شده در انتظار یک تایید قرار میگیرد تا روی محیط Production نیز Deploy شود. </b></p>
+        </div>
+    </div>
+    <div class="new-latter">
+        <h3>اگر سوالی از من داشتید ایمیل کنید</h3>
+        <form action="" class="input">
+            <input type="search" class="input-search" placeholder="Your email">
+            <i class="fa fa-search"></i>
+        </form>
+        <div class="clear-fix"></div>
+
+    </div>
+    <div class="clear-fix"></div>
+    <div class="Labels">
+        <div>
+            <h5>:برچسب ها</h5>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">لب تاپ</a> </li>
+                <li><a href="#">موبایل</a></li>
+                <li><a href="#">جدید</a></li>
+                <li><a href="#">لوازم </a></li>
+                <li><a href="#">هدفون ها</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="Opinion">
+        <div>
+            <h1>(2)نظر ها</h1>
+        </div>
+        <div class="width">
+            <textarea placeholder="دیدکاه خود را اینجا بیان کنید..."></textarea>
+        </div>
+        <div class="Record">
+
+            <button>نظر بدهید</button>
+        </div>
+        <div class="Comments">
+            <ul>
+                <li class="color-blak">علی نیازی</li>
+                <li>چند روز پیش </li>
+            </ul><br>
+            <p class="color-gray"><b>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف</b></p>
+        </div>
+        <div class=" view ">
+            <ul class="border-bottom">
+                <li>نظر<i class="fa fa-commenting"></i></li>
+                <li>1<i class=" 	fa fa-hand-o-right"></i></li>
+                <li><i class=" 	fa fa-hand-o-down"></i></li>
+            </ul>
+        </div>
+        <div class="Comments">
+            <ul>
+                <li class="color-blak">علی نیازی</li>
+                <li>چند روز پیش </li>
+            </ul><br>
+            <p class="color-gray"><b>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف</b></p>
+        </div>
+        <div class=" view ">
+            <ul class="">
+                <li>نظر<i class="fa fa-commenting"></i></li>
+                <li>9<i class=" 	fa fa-hand-o-right"></i></li>
+                <li><i class=" 	fa fa-hand-o-down"></i></li>
+            </ul>
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+
+
+
+    <div class="footer margin-top">
+        <ul>
+            <li class="">تگ ها</li>
+            <li class="">گروه ها</li>
+            <li class="">بلاگ </li>
+        </ul>
+        <p class="color-gray">وبلاگ شخصی رضا نبهانی - توسعه دهنده نرم افزار</p>
+        <p> <span><a href="#">UiPasta</a></span>طراحی شده در</p>
+    </div>
+
+
+    <script>
+        function showMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.className === "header-menu") {
+                menu.className += " show";
+            } else {
+                menu.className = "header-menu";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
